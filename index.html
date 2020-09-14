@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />	
+<title>Restraunt</title>	
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+	<style>
+
+	#map{
+		width:100%;
+		height:500px;
+		border: 1px solid;
+	}
+	.header{
+		background:lightgrey;
+		color:black;
+		font-family:Times New Roman;
+		height:60px;
+	}
+	.footer{
+		background:lightgrey;
+		color:black;
+		height:130px;
+		font-family:Verdana;
+		list-style:none;
+		font-size:18px;
+	}
+	.key{
+		border:2px solid;
+		padding:5px;
+		width:250px;
+		text-align:center;
+		text-decoration:none;
+		font-size:15px;
+	}
+</style>
+</head>
+<body>
+
+	<div class="header">
+		<h3><center>KENYAN RESTRAUNTS.</center></h3>
+		<h4><center>Name&cuisine.</center></h4>
+	</div>
+
+	<div id="map"></div>
+	<script>
+		var map =L.map('map').setView([-0,38],6.3);
+
+		L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=BEm6R2Aq73qDiXV9t1g5',{
+			attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>',
+		}).addTo(map);
+		var marker1=L.circle([-4.05, 39.66666], {
+		 	color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000	
+		 }).addTo(map);
+		marker1.bindPopup("<b>Park Ave.</b><br>Bakery.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker2=L.circle([-4.174444, 39.460278], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker2.bindPopup("<b>Flat Avenue.</b><br>Hamburgers.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker3=L.circle([-3.633333, 39.85], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker3.bindPopup("<b>West 57 Street.</b><br>Irish.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker4=L.circle([ -1.5, 40.033333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker4.bindPopup("<b>Stillwell Avenue.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker5=L.circle([-2.269444, 40.902222], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker5.bindPopup("<b>63 Road.</b><br>Jewish/Kosher.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker6=L.circle([-3.504722, 38.377778], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker6.bindPopup("<b>Astoria.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker7=L.circle([-0.456944, 39.658333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker7.bindPopup("<b>Victory.</b><br>Jewish/Kosher.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker8=L.circle([1.75, 40.05, ], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker8.bindPopup("<b>Avenue U.</b><br>Delicatessen.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker9=L.circle([3.916667, 41.833333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker9.bindPopup("<b>11 Avenue.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker10=L.circle([2.333333, 37.983333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker10.bindPopup("<b>Nostrand Avenue.</b><br>Ice Cream, Gelato, Yogurt.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker11=L.circle([0.35, 37.583333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker11.bindPopup("<b>Southern Blues.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker12=L.circle([0.05, 37.65], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker12.bindPopup("<b>18 Avenue.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker13=L.circle([-0.333333, 37.65], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker13.bindPopup("<b>Sutter Avenue.</b><br>Chinese.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker14=L.circle([-0.533333, 37.45], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker14.bindPopup("<b>East 66 Street.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker15=L.circle([-1.366667, 38.016667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker15.bindPopup("<b>Kings Highway.</b><br>Jewish/Kosher.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker16=L.circle([-1.516667, 37.266667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker16.bindPopup("<b>Church Avenue.</b><br>Ice Cream, Gelato, Yogurt, Ices.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker17=L.circle([-1.783333, 37.633333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker17.bindPopup("<b>Hillside Avenue.</b><br>Ice Cream, Gelato, Yogurt, Ices.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker18=L.circle([-0.45, 36.633333],{
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker18.bindPopup("<b>3 Avenue.</b><br>Delicatessen.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker19=L.circle([-0.416667, 36.95], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker19.bindPopup("<b>East 174 Street.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker20=L.circle([-0.5, 37.283333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker20.bindPopup("<b>1 Park West.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker21=L.circle([-0.716667, 37.15], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker21.bindPopup("<b>20 Avenue.</b><br>Delicatessen.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker22=L.circle([-1.166667, 36.816667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker22.bindPopup("<b>Broadway.</b><br>Delicatessen.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker23=L.circle([3.116667, 35.6], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker23.bindPopup("<b>10 Street.</b><br>Delicatessen.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker24=L.circle([1.233333, 35.116667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker24.bindPopup("<b>Ams Avenue.</b><br>Chicken.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker25=L.circle([1.1, 36.7], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker25.bindPopup("<b>Columbus Avenue.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker26=L.circle([0.516667, 35.283333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker26.bindPopup("<b>West 4 Street.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker27=L.circle([1.016667, 35.0], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker27.bindPopup("<b>Myrtle Avenue.</b><br>Hamburgers.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker28=L.circle([0.673056, 35.508333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker28.bindPopup("<b>37 Avenue.</b><br>Chinese.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker29=L.circle([0.333333, 35.166667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker29.bindPopup("<b>Wall Street.</b><br>Turkish.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker30=L.circle([0.5, 35.75], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker30.bindPopup("<b> 56 Street.</b><br>Caribbean.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker31=L.circle([0.016667, 37.066667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker31.bindPopup("<b>Church Street.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker32=L.circle([-0.3, 36.066667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker32.bindPopup("<b>East 233 Street.</b><br>Ice Cream, Gelato, Yogurt, Ices.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker33=L.circle([-1.083333, 35.866667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker33.bindPopup("<b>Court Street.</b><br>Donuts.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker34=L.circle([-1.85, 36.783333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker34.bindPopup("<b>5 Avenue.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker35=L.circle([-0.366667, 35.3], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker35.bindPopup("<b>Prince Street.</b><br>Bakery.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker36=L.circle([-0.783333, 35.35], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker36.bindPopup("<b>238 Ave.</b><br>Chinese.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker37=L.circle([0.283333, 34.75], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker37.bindPopup("<b>8 Avenue.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker38=L.circle([0.05, 34.725], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker38.bindPopup("<b>Wyckoff Avenue.</b><br>Delicatessen.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+		var marker39=L.circle([0.566667, 34.566667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker39.bindPopup("<b>Lexington Avenue.</b><br>Sandwiches/Salads/Mixed Buffet.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker40=L.circle([0.453056, 34.125], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker40.bindPopup("<b>Victory.</b><br>Delicatessen.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker41=L.circle([0.066667, 34.283333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker41.bindPopup("<b>Metropolitan Avenue.</b><br>Bagels/Pretzels.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker42=L.circle([-0.1, 34.75], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker42.bindPopup("<b>Lefferts.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker43=L.circle([-0.516667, 34.45], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker43.bindPopup("<b>Third Avenue.</b><br>Continental.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker44=L.circle([-0.666667, 34.833333], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker44.bindPopup("<b>3 Avenue.</b><br>Pizza.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker45=L.circle([-0.683333, 34.766667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker45.bindPopup("<b>Madison Avenue.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker46=L.circle([-0.521, 34.914], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker46.bindPopup("<b>East 92 Street.</b><br>American.").on('mouseover',function(e)
+		{this.openPopup()}).on('mouseout',function(e){this.closepopup()});
+
+		var marker47=L.circle([-1.283333, 36.816667], {
+			color:'red',
+		 	fillcolor:'#f03',
+		 	fillopacity:0.2,
+		 	radius:1000
+		}).addTo(map);
+		marker47.bindPopup("<b>Hylan.</b><br>Ice Cream, Gelato, Yogurt, Ices.").on('mouseover',function(e)
+		{this.openPopup()})
+	</script>
+	<div class="footer">
+		<div class="key"
+			<center><b><u>KEY.</u></b></center>
+			<center>&#11093;&#x2B55 Street Name&Cuisine.</center>
+		</div>
+
+		<p><b>NAME:HULDAH KWAMBOKA. &nbsp &nbsp &nbspREG NO:ENC222-0152/2017.</b></p>
+	</div>	
+</body>
+</html>
